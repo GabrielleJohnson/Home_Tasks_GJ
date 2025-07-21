@@ -23,6 +23,7 @@ class MakingChanges {
         person2.name = "Haley";
         person2.age = 24;
 
+        //prints name and age before change
         System.out.println("Person 1: "+ person1.name);
         System.out.println(person1.age);
 
@@ -31,7 +32,7 @@ class MakingChanges {
 
         MakingChanges.changeIdentities(person1 , person2);
 
-
+        //prints name and age after change
         System.out.println("Person 1: "+ person1.name);
         System.out.println(person1.age);
 
