@@ -1,3 +1,10 @@
+/*
+ * Gabrielle Johnson
+ * Quality Assurance Engineer Intern
+ * July 21, 2025
+ * Checks if an array is in ascending order
+ * */
+
 import java.util.*;
 
 public class ascending {

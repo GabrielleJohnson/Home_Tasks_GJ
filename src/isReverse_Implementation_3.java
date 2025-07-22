@@ -1,3 +1,10 @@
+/*
+ * Gabrielle Johnson
+ * Quality Assurance Engineer Intern
+ * July 21, 2025
+ * Reverses string using String Builder
+ * */
+
 import java.util.*;
 
 public class isReverse_Implementation_3 {

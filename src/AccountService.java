@@ -1,3 +1,10 @@
+/*
+ * Gabrielle Johnson
+ * Quality Assurance Engineer Intern
+ * July 21, 2025
+ * Account Services (Interface)
+ * */
+
 interface AccountService {
     /**
      * It finds an account by owner id
@@ -6,6 +13,7 @@ interface AccountService {
      * @return account or null
      */
     Account findAccountByOwnerId(long id);
+
     /**
      * It count the number of account with balance > the given value
      *
@@ -25,8 +33,8 @@ class AccountServiceImpl implements AccountService {
     //returns the user account or null if no  case account is found
     @Override
     public Account findAccountByOwnerId(long id) {
-        for (Account account: accounts) {
-            if (account.getOwner().getId() == id){
+        for (Account account : accounts) {
+            if (account.getOwner().getId() == id) {
                 return account;
             }
         }
@@ -37,8 +45,8 @@ class AccountServiceImpl implements AccountService {
     @Override
     public long countAccountsWithBalanceGreaterThan(long value) {
         long count = 0;
-        for (Account account: accounts){
-            if (account.getBalance() > value){
+        for (Account account : accounts) {
+            if (account.getBalance() > value) {
                 count++;
             }
         }
@@ -97,21 +105,23 @@ class User {
     }
 }
 
-class Main{
+class Main {
     public static void main(String[] args) {
         User user1 = new User(10L, "Gabrielle", "Johnson");
         User user2 = new User(30L, "Haley", "Whittle");
 
-        Account[] accounts ={
+        Account[] accounts = {
                 new Account(3L, 3455L, user1),
                 new Account(4L, 87473L, user2)
         };
 
         AccountService service = new AccountServiceImpl(accounts);
 
+        //Finds Account Owner by ID and returns the account and balance
         Account found = service.findAccountByOwnerId(10L);
-        System.out.println(found !=null ? "Found account " + found.getBalance() : "Account not found");
+        System.out.println(found != null ? "Found account " + found.getBalance() : "Account not found");
 
+        //Prints results of number of accounts with a balance above threshold
         long count = service.countAccountsWithBalanceGreaterThan(9000L);
         System.out.println("Accounts with balance > 9000L : " + count);
     }

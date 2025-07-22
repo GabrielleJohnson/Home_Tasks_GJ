@@ -1,3 +1,10 @@
+/*
+ * Gabrielle Johnson
+ * Quality Assurance Engineer Intern
+ * July 21, 2025
+ * Changing Identities
+ * */
+
 public class Person {
     String name;
     int age;
@@ -24,19 +31,19 @@ class MakingChanges {
         person2.age = 24;
 
         //prints name and age before change
-        System.out.println("Person 1: "+ person1.name);
+        System.out.println("Person 1: " + person1.name);
         System.out.println(person1.age);
 
-        System.out.println("Person 2: "+ person2.name);
+        System.out.println("Person 2: " + person2.name);
         System.out.println(person2.age + "\n");
 
-        MakingChanges.changeIdentities(person1 , person2);
+        MakingChanges.changeIdentities(person1, person2);
 
         //prints name and age after change
-        System.out.println("Person 1: "+ person1.name);
+        System.out.println("Person 1: " + person1.name);
         System.out.println(person1.age);
 
-        System.out.println("Person 2: "+ person2.name);
+        System.out.println("Person 2: " + person2.name);
         System.out.println(person2.age);
     }
 
