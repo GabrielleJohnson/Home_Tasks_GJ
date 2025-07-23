@@ -15,7 +15,7 @@ public class isReverse_Implementation_1 {
 
         //reverses the string
         for (int i = stringToRevers.length() - 1; i >= 0; i--) {
-            strNew += stringToRevers.charAt(i); //checks the index
+            strNew += stringToRevers.charAt(i);
         }
 
         //prints the results
